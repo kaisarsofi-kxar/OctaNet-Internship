@@ -1,0 +1,132 @@
+body {
+    font-family:  'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #3498db; /* Blue color */
+}
+
+#task-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-form input,
+#task-form select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#task-form input[type="date"] {
+    width: 100%;
+}
+
+#task-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db; /* Blue color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#task-list {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.task {
+    background-color: #3498db; /* Blue color */
+    color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task:hover {
+    background-color: #2980b9; /* Darker blue color on hover */
+}
+
+.task button {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    font-size: large;
+}
+.task-name {
+    width:30%;
+    word-wrap: break-word;
+    text-align: left;
+}
+.task-detail{
+    width: 13%;
+    text-align: center;
+}
+
+
+
+
+
+.task .priority {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.task.priority-high .priority {
+    background-color: #e74c3c; /* Red color for high priority */
+    color: #fff;
+}
+
+.task.priority-medium .priority {
+    background-color: #f39c12; /* Yellow color for medium priority */
+    color: #fff;
+}
+
+.task.priority-low .priority {
+    background-color: #2ecc71; /* Green color for low priority */
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    #task-form input,
+    #task-form select {
+        width: 100%;
+    }
+
+    #task-form input[type="date"] {
+        width: 100%;
+    }
+
+    #task-form button {
+        width: 100%;
+    }
+}
